@@ -113,6 +113,8 @@
           <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
             <div class="modal-body">
               <%= f.file_field :picture %>
+            </div>
+            <div class="modal-body">
               <%= f.input :caption %>
             </div>
             <div class="modal-footer">
@@ -134,3 +136,10 @@
   </button>
 
 <div class="clear"></div>
+
+<div class="img-fluid">
+<% @place.photos.each do |photo| %>
+  <%= image_tag photo.picture.url %>
+  <%= photo.caption %>
+<% end %>
+</div>
