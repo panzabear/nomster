@@ -1,7 +1,7 @@
 class CreatePhotos < ActiveRecord::Migration[5.2]
   def change
     create_table :photos do |t|
-      t.string :image_url
+      t.string :picture
       t.text :caption
       t.integer :place_id
       t.integer :user_id

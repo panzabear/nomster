@@ -9,5 +9,7 @@ end
 private
 
 def photo_params
-  params.require(:photo).permit(:image_url, :caption)
+  params.require(:photo).permit(:picture, :caption)
 end
+
+## picture and a caption
