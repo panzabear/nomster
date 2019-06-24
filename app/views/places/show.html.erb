@@ -71,10 +71,19 @@
       <br>
       <br>
    <% @place.photos.each do |photo| %>
-     <div class="container_image">
-       <%= image_tag photo.picture.url %>
-     </div>
-     <%= photo.caption %>
+     <br>
+     <div class="container-fluid">
+       <div class="row">
+         <div class="col-lg-6">
+           <%= image_tag photo.picture.url %>
+         </div>
+         <div class="col-lg-6">
+           <blockquote>
+             <%= photo.caption %>
+           </blockquote>
+         </div>
+       </div>
+    </div>
    <% end %>
 </div>
 
