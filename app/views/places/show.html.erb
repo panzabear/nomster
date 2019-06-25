@@ -72,12 +72,12 @@
       <br>
    <% @place.photos.each do |photo| %>
      <br>
-     <div class="container-fluid imageResizer">
+     <div class="container-fluid">
        <div class="row">
-         <div class="col-lg-6">
+         <div class="col-lg-6 imageResizer">
            <%= image_tag photo.picture.url %>
          </div>
-         <div class="col-lg-6">
+         <div class="col-lg-6 imageResizer">
            <blockquote>
              <%= photo.caption %>
            </blockquote>

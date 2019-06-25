@@ -126,13 +126,13 @@ blockquote p {
   display: inline;
 }
 
-.imageResizer {
-  width:100%;
-  height: auto;
+.imageResizer > img {
+  max-width: 400px;
+  max-height: 400px;
 }
 
 .carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a > img {
-  max-height: 600px;
+  max-height: 800px;
   width: 100%;
 }
 
