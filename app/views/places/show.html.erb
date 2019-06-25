@@ -72,7 +72,7 @@
       <br>
    <% @place.photos.each do |photo| %>
      <br>
-     <div class="container-fluid">
+     <div class="container-fluid imageResizer">
        <div class="row">
          <div class="col-lg-6">
            <%= image_tag photo.picture.url %>
