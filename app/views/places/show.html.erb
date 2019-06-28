@@ -57,9 +57,7 @@
     </div>
   </div>
       <div class="float-right">
-
         <% if current_user && current_user == @place.user %>
-
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-2">
           Add a photo
@@ -119,6 +117,10 @@
         <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#myModal">
           Add a comment
         </button>
+        <button type="button" class="btn btn-primary float-right">
+        <%= link_to 'Destroy', place_comment_path(@comment), class: "btn btn-primary", method: :delete, data: {confirm: 'Do you want to delete the comment?'} %>
+        </button>
+
         <div class="clear"></div>
         <br>
         <br>
@@ -134,6 +136,7 @@
                 <%= comment.message %>
                 <small><%= comment.user.email %></small>
               </blockquote>
+
             </div>
           <% end %>
       </div>

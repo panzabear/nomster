@@ -2,6 +2,7 @@ class Comment < ApplicationRecord
   belongs_to :user
   belongs_to :place
   after_create :send_comment_email
+  # dependent: :destroy
 
   RATINGS = {
     'one star':'1_star',
