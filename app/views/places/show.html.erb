@@ -117,9 +117,6 @@
         <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#myModal">
           Add a comment
         </button>
-        <button type="button" class="btn btn-primary float-right">
-        <%= link_to 'Destroy', place_comment_path(@comment), class: "btn btn-primary", method: :delete, data: {confirm: 'Do you want to delete the comment?'} %>
-        </button>
 
         <div class="clear"></div>
         <br>
@@ -135,8 +132,12 @@
                 <% end %>
                 <%= comment.message %>
                 <small><%= comment.user.email %></small>
-              </blockquote>
-
+              <% if comment.user == current_user %>
+              <button type="button" class="btn btn-primary float-right">
+              <%= link_to 'Delete', place_comment_path(comment), class: "btn btn-primary", method: :delete, data: {confirm: 'Do you want to delete the comment?'} %>
+              </button>
+              <% end %>
+            </blockquote>
             </div>
           <% end %>
       </div>
